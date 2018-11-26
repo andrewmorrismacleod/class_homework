@@ -1,11 +1,12 @@
 class Team
 
-  attr_accessor :name, :players, :coach
+  attr_accessor :name, :players, :coach, :points
 
   def initialize(name, players, coach)
     @name = name
     @players = players
     @coach = coach
+    @points = 0
   end
 
   def add_player(player)
@@ -15,5 +16,7 @@ class Team
   def is_player?(player)
     return @players.include?(player)
   end
+
+
 
 end
