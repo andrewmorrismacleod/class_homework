@@ -25,4 +25,10 @@ class TestTeam < MiniTest::Test
     assert_equal("Steve", team.coach)
   end
 
+  def test_team_add_player
+    team = Team.new("Cruden Bay JFC", ["Me", "Blacko", "Player_3"], "Kevin")
+    team.add_player("Fred")
+    assert_equal(["Me", "Blacko", "Player_3", "Fred"], team.players)
+  end
+
 end
