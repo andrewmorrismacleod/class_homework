@@ -12,4 +12,8 @@ class Team
     @players.push(player)
   end
 
+  def is_player?(player)
+    return @players.include?(player)
+  end
+
 end
