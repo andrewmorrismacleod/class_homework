@@ -17,6 +17,12 @@ class Team
     return @players.include?(player)
   end
 
+  def outcome(result)
+    return if result == "loss"
+    if result == "win"
+      @points += 3
+    end
+  end
 
 
 end
