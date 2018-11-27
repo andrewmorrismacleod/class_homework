@@ -20,4 +20,11 @@ class Library
     @books.push({title: title, rental_details: {student_name: "", date: ""}})
   end
 
+  def update_rental_details(title, name, date)
+    books_index = @books.index { |book| book[:title] = title}[0]
+    @books[0][:rental_details][:student_name] = name
+    @books[0][:rental_details][:date] = date
+
+  end
+
 end
