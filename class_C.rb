@@ -12,4 +12,8 @@ class Library
     return @books.select{ |book| book[:title] == title}[0]
   end
 
+  def get_book_rental(title)
+    return @books.select{ |book| book[:title] == title}[0][:rental_details]
+  end
+
 end
