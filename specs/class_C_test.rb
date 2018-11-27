@@ -50,5 +50,12 @@ class TestLibrary < MiniTest::Test
     assert_equal(rental_hash, library.get_book_rental("the_name_of_the_rose"))
   end
 
+  def test_add_new_book
+    library = Library.new(@library_array)
+    library.add_new_book("lost_horizon")
+    book_hash = {title: "lost_horizon", rental_details: {student_name: "", date: ""}}
+    assert_equal(book_hash, library.get_book("lost_horizon"))
+  end
+
 
 end

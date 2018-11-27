@@ -16,4 +16,8 @@ class Library
     return @books.select{ |book| book[:title] == title}[0][:rental_details]
   end
 
+  def add_new_book(title)
+    @books.push({title: title, rental_details: {student_name: "", date: ""}})
+  end
+
 end
