@@ -8,4 +8,8 @@ class Library
     return @books
   end
 
+  def get_book(title)
+    return @books.select{ |book| book[:title] == title}[0]
+  end
+
 end
